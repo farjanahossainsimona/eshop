@@ -15,7 +15,7 @@
     <!-- Main Navigation-->
     <nav class="site-menu">
       <ul>
-        <li class="has-megamenu"><a href="/"><span>Home</span></a>
+        <li class="has-megamenu"><a href="{% url 'home.index' %}"><span>Home</span></a>
           <ul class="mega-menu">
             <li><a class="d-block img-thumbnail text-center navi-link" href="index.html"><img alt="Featured Products Slider" src="{% static 'img/mega-menu-home/01.jpg' %}">
                 <h6 class="mt-3">Featured Products Slider</h6></a></li>
@@ -27,7 +27,7 @@
                 <h6 class="mt-3">Dark Header</h6></a></li>
           </ul>
         </li>
-        <li><a href="/shop"><span>Shop</span></a>
+        <li><a href="{% url 'shop.index' %}"><span>Shop</span></a>
           <ul class="sub-menu">
               <li><a href="shop-categories.html">Shop Categories</a></li>
             <li class="has-children"><a href="/shop"><span>Shop Grid</span></a>
@@ -98,9 +98,9 @@
             </li>
           </ul>
         </li>
-        <li><a href="/account"><span>Account</span></a>
+        <li><a href="{% url 'account.index' %}"><span>Account</span></a>
           <ul class="sub-menu">
-              <li><a href="account-login.html">Login / Register</a></li>
+              <li><a href="{% url 'login' %}">Login / Register</a></li>
               <li><a href="account-password-recovery.html">Password Recovery</a></li>
               <li><a href="/account">Orders List</a></li>
               <li><a href="account-wishlist.html">Wishlist</a></li>
@@ -110,7 +110,7 @@
               <li><a href="account-single-ticket.html">Single Ticket</a></li>
           </ul>
         </li>
-        <li><a href="/blog"><span>Blog</span></a>
+        <li><a href="{% url 'blog.index' %}"><span>Blog</span></a>
           <ul class="sub-menu">
             <li class="has-children"><a href="blog-rs.html"><span>Blog Layout</span></a>
               <ul class="sub-menu">

@@ -8,3 +8,10 @@ class IndexView(generic.View):
 
     def get(self, request):
         return render(request, self.template_name)
+
+
+class LoginView(generic.View):
+    template_name = 'account/login.html'
+
+    def get(self, request):
+        return render(request, self.template_name)
