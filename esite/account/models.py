@@ -29,7 +29,8 @@ USER_ROLE_LIST = (
 
 class User(models.Model):
 	username = models.CharField(max_length=50)
-	full_name = models.CharField(max_length=50)
+	first_name = models.CharField(max_length=50)
+	last_name = models.CharField(max_length=50)
 	email = models.EmailField(max_length=50, null=True, blank=True)
 	email_verify = models.CharField(max_length=10, default='0')
 	phone = models.CharField(max_length=15, unique=True)
