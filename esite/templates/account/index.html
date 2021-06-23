@@ -398,9 +398,9 @@
                 <div class="info-label" data-toggle="tooltip" title="You currently have 290 Reward Points to spend"><i class="icon-medal"></i>290 points</div>
               </div>
               <div class="user-info">
-                <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="{% static 'img/account/user-ava.jpg' %}" alt="User"></div>
+                <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="{{ user.profile_pic.url }}" alt="User"></div>
                 <div class="user-data">
-                  <h4>Daniel Adams</h4><span>Joined February 06, 2017</span>
+                  <h4>{{ user.first_name }}</h4><span>Joined February 06, 2017</span>
                 </div>
               </div>
             </aside>

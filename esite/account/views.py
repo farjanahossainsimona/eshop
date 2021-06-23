@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.views import generic
 from django.db.models import Q
@@ -9,7 +9,12 @@ class IndexView(generic.View):
     template_name = 'account/index.html'
 
     def get(self, request):
-        return render(request, self.template_name)
+        user_id = request.session['logged_user']
+        if user_id:
+            user = get_object_or_404(User, id=user_id)
+        else:
+            user = ""
+        return render(request, self.template_name, {'user':user})
 
 
 class LoginView(generic.View):
